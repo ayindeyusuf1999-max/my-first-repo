@@ -10,8 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Say hello
-        run: echo "Pipeline is working, Yusuf!"
-        
+      - name: Check files exist
+        run: |
+          echo "Checking repo files..."
+          ls
+          echo "All files listed successfully, Yusuf!"
+      
